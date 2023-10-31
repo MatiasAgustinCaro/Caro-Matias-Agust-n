@@ -1,0 +1,22 @@
+{%extends "paginas/base.html"%}
+
+{% block titulo %}Agregar nuevo libros{% endblock titulo %}
+
+{% csrf_token %}
+
+
+{% block contenido %}
+    <div class="card">
+        <div class="card-header">
+            Crear libros
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos de los libros</h4>
+            
+            {% include 'libros/form.html' %}
+
+        </div>
+    </div>
+
+{% endblock contenido %}
+    

@@ -1,0 +1,35 @@
+{%extends "paginas/base.html"%}
+
+{% block titulo %}
+ Inicio 
+{% endblock titulo %}
+{% csrf_token %}
+
+  {% block contenido %}
+
+
+  </div>
+  {% if request.user.is_authenticated %}
+  <div  class="container">
+    <br>
+    <br>
+    
+
+    <h4>
+      {{ user.username | upper}}, Bienvenido a DigitalBook!
+
+      <br>    
+      <br>
+      <br>
+
+        Una pagina donde puedes subir y editar libros!
+      
+    </h4>
+
+    
+  {% endif %}
+
+  </div>  
+  
+{% endblock contenido %}
+    

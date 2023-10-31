@@ -1,0 +1,38 @@
+{%extends "paginas/base.html/"%}
+
+{% block titulo %} Inicio {% endblock titulo %}
+
+{% csrf_token %}
+
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+
+
+
+<br>
+<br>
+<br>
+
+<div class="container">
+  
+    <div class="card mx-auto" style="width: 30rem;">
+
+      <div class="card-body">
+        <h5 class="card-title">Ingrese sus credenciales</h5>
+          <form action="" method="post">
+            {% csrf_token %}
+            {{form | crispy}}
+
+            <input type="submit" value="Ingresar" class= "btn btn-success float-rigth">
+          
+          </form>
+        
+
+      </div>
+
+    </div>
+</div>
+
+{% endblock contenido %}
